@@ -38,3 +38,9 @@ app.include_router(user.router, prefix="/admin", tags=["User"])
 app.include_router(reports.router, prefix="/admin", tags=["Reports"])
 app.include_router(location.router)
 app.include_router(auth.router)
+
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Default to 10000 if PORT not set
+    uvicorn.run(app, host="0.0.0.0", port=port)
