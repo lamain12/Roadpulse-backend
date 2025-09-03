@@ -17,7 +17,8 @@ async def reward_points(token: str, navigation_time:int):
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     
-    points = int(navigation_time)/60/6 # 1 point for every 6 minutes
+    points = navigation_time // 360  # 1 point for every 6 minutes (360 seconds)
+    print("points to add:", points)
     current_user_points = user['points'] 
     new_points = int(current_user_points + floor(points))
 
