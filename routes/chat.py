@@ -37,9 +37,9 @@ def read_sensitive_words(filename):
 
 # Initialize sensitive words and compile the regex
 sensitive_words = []
-read_sensitive_words('resources/en/pornography.csv')
-read_sensitive_words('resources/en/violence.csv')
-read_sensitive_words('resources/en/vulgar.csv')
+read_sensitive_words('en/pornography.csv')
+read_sensitive_words('en/violence.csv')
+read_sensitive_words('en/vulgar.csv')
 sensitive_words_regex = compile_sensitive_words(sensitive_words)
 
 @router.get("/guestUsername")
