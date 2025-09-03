@@ -16,7 +16,7 @@ import traceback
 # =========================================
 # CONFIGURATION
 # =========================================
-GOOGLE_API_KEY = "AIzaSyDEE3f7_iqrd2m3SzfiRJywFxEVaOSIhqw"
+GOOGLE_API_KEY = "AIzaSyBbWpvn05IoRKIE5u53R8pOtIyrHOBWluM"
 OWM_API_KEY = "bcfd224c3aa391b22884545871754680"
 gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
