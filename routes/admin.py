@@ -323,7 +323,7 @@ async def get_prefer_travel_time_weekday(current_admin: str = Depends(verify_adm
         time_distribution = defaultdict(int)
 
         async for route in route_collection.find({}):
-            departure_str = route.get("datetime")
+            departure_str = route.get("date")
             if not departure_str:
                 continue
             try:
@@ -357,7 +357,7 @@ async def get_prefer_travel_time_weekend(current_admin: str = Depends(verify_adm
         time_distribution = defaultdict(int)
 
         async for route in route_collection.find({}):
-            departure_str = route.get("datetime")
+            departure_str = route.get("date")
             if not departure_str:
                 continue
             try:
